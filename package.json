@@ -1,0 +1,40 @@
+{
+	"name": "PhaserTest",
+	"description": "Testing Phaser.IO",
+	"version": "0.0.1",
+	"scripts": {
+		"start": "NODE_PATH=./src webpack serve --mode=development --config webpack.dev.js",
+		"startdev": "NODE_PATH=./src webpack serve --mode=development --config webpack.dev.js --host 0.0.0.0",
+		"compile": "NODE_PATH=./src webpack --mode=development --config webpack.dev.js",
+		"build": "NODE_PATH=./src webpack --mode=production --progress --config webpack.prod.js",
+		"startwin": "cross-env NODE_PATH=./src webpack serve --mode=development --config webpack.dev.js",
+		"buildwin": "cross-env NODE_PATH=./src webpack --mode=production --progress --config webpack.prod.js",
+		"deploy": "./dashbuild.sh",
+		"deploy-local": "./dashbuild.sh -m",
+		"watch": "NODE_PATH=./src webpack --mode=development --config webpack.watch.js --watch",
+		"rollback": "./rollback.sh",
+		"rollback-local": "./rollback.sh -m"
+	},
+	"dependencies": {
+		"lodash": "^4.17.20",
+		"phaser": "^3.52.0"
+	},
+	"devDependencies": {
+		"clean-webpack-plugin": "^3.0.0",
+		"compression-webpack-plugin": "^7.1.2",
+		"copy-webpack-plugin": "^7.0.0",
+		"extract-text-webpack-plugin": "^3.0.2",
+		"file-loader": "^6.2.0",
+		"html-webpack-plugin": "^5.0.0",
+		"uglifyjs-webpack-plugin": "^2.2.0",
+		"url-loader": "^4.1.1",
+		"webpack": "^5.21.2",
+		"webpack-bundle-analyzer": "^4.4.0",
+		"webpack-cli": "^4.5.0",
+		"webpack serve": "^3.11.2",
+		"webpack-merge": "^5.7.3"
+	},
+	"repository": "git@github.com:VahnRPG/PhaserTest.git",
+	"author": "Marc Ryan <vahnrpg@gmail.com>",
+	"license": "MIT"
+}
